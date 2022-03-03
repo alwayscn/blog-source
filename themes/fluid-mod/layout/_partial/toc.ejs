@@ -1,0 +1,10 @@
+<% if(theme.post.toc.enable){ %>
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;<%= __('post.toc')%></p>
+    <div id="tocbot"></div>
+    <div class="catalog-close" onclick="close_show(0)">关闭</div>
+    <div id="post-catalog-bar" onclick="close_show(1)" class="post-catalog-bar-left-minborder" style="left: 144px;">
+       <i class="far fa-book-open" style="font-size: 10px"></i> 目 录
+    </div>
+  </div>
+<% } %>

@@ -1,0 +1,115 @@
+<div id="footerContent"  class="rgba-black-slight">
+<footer>
+  <div class="footer-plane">
+      <div class="blog_music">
+        <script src="//music.clwl.online/Player/player.min.js" id="SinKingMusic" key="765"></script>
+      </div>
+      <div class="footer-container">
+
+        <div class="footer-left">
+            <div>
+            <!-- 版权信息 -->
+            <% if(theme.footer.show_copyright) { %>
+            <div class="footer-info">
+                <% if(theme.footer.show_copyright) { %>
+                  Copyright © <%= date(new Date(), 'YYYY') %>&nbsp;<%= config.author || config.title %>.Powered by
+                 <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener noreferrer">
+                  Fluid
+                 </a>
+                <% } %>
+            </div>
+            <% } %>
+            <!-- 备案信息 -->
+            <% if(theme.footer.beian.enable) { %>
+                <div class="footer-info">
+                    <span class="footer-icp">
+
+                        <!--<img class="ipc-icon"src="https://www.baimifan.com.cn/wp-content/themes/CorePress-Pro/static/img/icp.svg"
+                        alt=""> -->
+                        <% if(theme.footer.beian.police_icon) { %>
+                          <img src="<%- theme.footer.beian.police_icon %>" />
+                        <% } %>
+                        <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener noreferrer">
+                            <%- theme.footer.beian.icp_text %>
+                         </a>
+
+                        <!-- <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2021030426号-1</a> -->
+                         <% if(theme.footer.beian.police_text && theme.footer.beian.police_code) { %>
+                              <span class="police-beian-sep">&nbsp;|&nbsp;</span>
+                              <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%- theme.footer
+                              .beian.police_code %>" rel="nofollow noopener" class="police-beian" target="_blank" >
+                                <span><%- theme.footer.beian.police_text %></span>
+                              </a>
+                         <% } %>
+
+                    </span>
+                </div>
+            <% } %>
+            </div>
+
+        </div>
+        <div class="footer-details footer-right">
+            <div>
+                <% if(theme.footer.date.enable) { %>
+                <div class="footer-aside-box">
+                    <i class="fa fa-cog fa-spin"></i>
+                    <span id="span">本站已稳定运行: 128天11小时56分5秒</span>
+                    <script type="text/javascript">
+                        function runtime() {
+                            // 初始时间，日/月/年 时:分:秒
+                            // X = new Date("09/27/2021 07:21:00");
+                            console.log("<%- theme.footer.date.create_date %>")
+                            X = new Date("<%- theme.footer.date.create_date %>");
+                            Y = new Date();
+                            T = (Y.getTime() - X.getTime());
+                            M = 24 * 60 * 60 * 1000;
+                            a = T / M;
+                            A = Math.floor(a);
+                            b = (a - A) * 24;
+                            B = Math.floor(b);
+                            c = (b - B) * 60;
+                            C = Math.floor((b - B) * 60);
+                            D = Math.floor((c - C) * 60);
+                            //信息写入到DIV中
+                            span.innerHTML = "<%= theme.footer.date.text%>: " + A + " 天" + B + " 小时" + C + " 分" + D
+                             + " 秒"
+                        }
+
+                        setInterval(runtime, 1000);
+                    </script>
+                </div>
+                <% } %>
+
+                <% if(theme.footer.site_pv.enable || theme.footer.site_uv.enable) { %>
+                <div class="footer-aside-box">
+                    <% if(theme.footer.site_pv.enable) { %>
+                      <!-- 不蒜子统计PV -->
+                      <span id="busuanzi_container_site_pv" style="display:none">
+                          <%= theme.footer.site_pv.text.split('%d')[0] %><span id="busuanzi_value_site_pv"></span><%= theme.footer.site_pv.text.split('%d')[1] %>
+                      </span>
+                    <% } %>
+                    <% if(theme.footer.site_uv.enable) { %>
+                      <!-- 不蒜子统计UV -->
+                      <span id="busuanzi_container_site_uv" style="display:none">
+                        <% if(theme.footer.site_pv.enable) { %>|<% } %>
+                        <%= theme.footer.site_uv.text.split('%d')[0] %><span id="busuanzi_value_site_uv"></span><%= theme.footer.site_uv.text.split('%d')[1] %>
+                      </span>
+                    <% } %>
+                </div>
+                <% } %>
+            </div>
+      </div>
+      </div>
+      <!-- 一言 -->
+      <% if(theme.footer.hitokoto) { %>
+          <div class="footer-hitokoto">
+            <a id="hitokotoa" href="#" target="_blank" rel="nofollow noopener noreferrer">
+              <span id="hitokoto"></span>
+            </a>
+          </div>
+      <% } %>
+  </div>
+</footer>
+</div>
+<%- partial('_partial/scripts.ejs') %>
+<%- partial('_partial/analytics.ejs') %>

@@ -1,0 +1,53 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server",
+    "sync": "yuque-hexo sync",
+    "clean:yuque": "yuque-hexo clean"
+  },
+  "hexo": {
+    "version": "5.4.1"
+  },
+  "dependencies": {
+    "hexo": "^5.4.0",
+    "hexo-abbrlink": "^2.2.1",
+    "hexo-all-minifier": "^0.5.7",
+    "hexo-deployer-git": "^3.0.0",
+    "hexo-filter-nofollow": "^2.0.2",
+    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-category": "^1.0.0",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-index": "^2.0.0",
+    "hexo-generator-sitemap": "^2.2.0",
+    "hexo-generator-tag": "^1.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-jade": "^0.5.0",
+    "hexo-renderer-marked": "^4.1.0",
+    "hexo-renderer-stylus": "^2.0.1",
+    "hexo-server": "^2.0.0",
+    "hexo-static-cos": "0.0.2",
+    "hexo-util": "^2.5.0",
+    "hexo-wordcount": "^6.0.1"
+  },
+  "devDependencies": {
+    "yuque-hexo": "^1.9.1"
+  },
+  "yuqueConfig": {
+    "postPath": "source/_posts/语雀",
+    "cachePath": "yuque.json",
+    "mdNameFormat": "slug",
+    "adapter": "hexo",
+    "concurrency": 5,
+    "baseUrl": "https://www.yuque.com/api/v2",
+    "login": "extime",
+    "repo": "blog",
+    "token": "hqTJO4VdljjNXQyzgctIsySyHlbcqe6eWH3r7oGu",
+    "onlyPublished": true,
+    "onlyPublic": true
+  }
+}

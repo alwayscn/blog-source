@@ -1,0 +1,489 @@
+#---------------------------
+# Fluid
+# Author: Fluid-dev organization
+# Github: https://github.com/fluid-dev/hexo-theme-fluid
+#---------------------------
+
+
+#---------------------------
+# 全局
+# Site
+#---------------------------
+
+avatar: /static/images/avatar.jpg # 头像 /img/head.jpg
+
+favicon: /favicon_1.ico # 网站标签页的 icon
+
+apple_touch_icon: /favicon_1.ico # 用于苹果设备的 icon
+
+title_join_string: ' - '  # 浏览器标签页中的标题分隔符，效果： 文章名 ~ 站点名
+
+force_https: false  # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
+
+highlight: # 代码高亮
+  enable: true
+  line_number: false # 显示代码行号
+  theme: tranquil-heart # available: github-v2 | tomorrow | tomorrow-night | tomorrow-night-eighties，更多主题可从 https://jmblog.github.io/color-themes-for-google-code-prettify/ 获取，保存为 `*.min.css` 到 `source/lib/prettify/`，在其中 .prettyprint{ background: ***; ...} 的background 值后加上 !important，例如：.prettyprint{background:#fafbfc!important; ...}
+
+fun_features: # 一些好玩的功能
+  typing: # 为 subtitle 添加打字机效果
+    enable: true
+    typeSpeed: 70 # 打印速度
+    cursorChar: "_" # 游标字符
+    loop: false # 是否循环播放效果
+  anchorjs: # 为文章内容中的标题添加锚图标
+    enable: true
+    element: h1,h2,h3,h4,h5,h6
+    placement: right # icon放置的位置： left | right
+    visible: hover # always：一直可见，hover：鼠标悬停时出现，touch：仅移动设备可见
+    icon: "" # 例如：§ | # | ❡ 等，留空则为默认效果
+  mouse_click: # 鼠标点击动效
+    enable: false
+    style: values # 目前设置两个值：values（价值观词汇） | love（爱心）
+  monitortext:
+    enable: true
+    text: 你不爱我了QAQ
+  snow:
+    enable: true # 是否开启背景飘雪效果
+    color: rgba(255, 255, 255, 0.7) # 雪花颜色
+
+# .list-item:hover {
+#    background: rgba(66,185,131,.05);
+#}
+
+
+color: # 主体颜色配置，可以从这里寻找启发： https://www.webdesignrankings.com/resources/lolcolors/
+  body_bg_color: "#c8ebdf"
+  navbar_bg_color: "#bbe6d6" #fc9d9a
+  navbar_text_color: "#3c4858"
+  text_color: "#3c4858"
+  link_color: "#3c4858"
+  #  sidebar_button:hover
+  link_hover_color: "#27ae60" #fe4365
+  board_color: "#e4f5ef"
+
+  toc_title_p_color: "#3c4858"
+  tocbot_link_color: "#3c4858"
+  tocbot_link_active_color: "#27ae60" #fe4365
+  tocbot_link_shadow: "0.1em 0.1em 0.2em #ffffff"
+  tocbot_active_link_shadow: "0.1em 0.1em 0.2em #ffbcbc"
+
+  sidebar_text_color: "#3c4858"
+  # 246, 248, 250 # f6f8fad1
+  sidebar_background_color: "rgba(228,245,239, 0.82)"
+
+  sidebar_button_color: "#99a9bf"
+  sidebar_button_shift_color: "#ffffff"
+  sidebar_button_shift_shadow: "0.1rem 0.1rem 0.5rem #3e3e3e"  #"0.1rem 0.1rem 0.5rem #3e3e3e"
+  sidebar_about_link_color: "#3c4858"
+  sidebar_about_link_hover_color: "#27ae60"
+  sidebar_avatar_border: "5px solid #ffffff"
+  sidebar_subtitle_color: "#999999"
+  sidebar_friend_title: "#ffffff"
+  # 友链button
+  sidebar_friend_title_background: "#27ae60"
+
+  sidebar_friend_link: "#3c4858"
+  sidebar_friend_link_hover: "#27ae60"
+
+  sidebar_friend_li_border: "1px dashed #bdbdbd"
+
+  sidebar_friend_li_hover:  "#ebf8f3" #27ae60 #fe91b4
+  sidebar_friend_ico: "#bfbfbf"
+
+  footer_color: "#ffffff"
+  footer_shadow: "0.1rem 0.1rem 0.5rem white"
+  footer_a_color: "#ffffff"
+  footer_a_hover_color: "#27ae60"
+  footer_theme_a_color: "#27ae60"
+  footer_theme_a_shadow: "0.1rem 0.1rem 0.2rem #fe4365"
+  footer_icon_color: "#fc9d9a"
+  footer_icon_shadow: "0.1rem 0.1rem 0.5rem #ffffff"
+  scrollbar_color: "#e4f5ef" #fec9c9 #e4f5ef
+  scrollbar_thumb_color: "#42b983" #fe4365
+
+web_analytics: # 网页统计代码
+  enable: true
+  baidu: # 百度统计的Key，留空则不启用
+  tencent:  # 腾讯统计的H5 App id，参见 https://mta.qq.com/h5/manage/ctr_app_manage  500701132
+  woyaola:  # 51.la站点统计ID，参见 https://www.51.la/user/site/index  20440495
+  cnzz: 1258664352 # 友盟/cnzz站点统计web_id，参见 https://web.umeng.com/main.php?c=site&a=show
+  google: UA-150991779-1 # Google统计的Tracking ID，参见 https://analytics.google.com/analytics/web/
+
+fancybox: # 文章图片灯箱
+  enable: true
+
+smooth_scroll: # 平滑滚动效果
+  enable: false
+
+daovoice: # 在线客服 Daovoice 参考：http://dashboard.daovoice.io
+  enable: false # 是否开启在线客服聊天
+  appid: ''  # 应用ID设置
+
+# 对页面中的图片和评论插件进行懒加载处理，可见范围外的元素不会提前加载
+# Lazy loading of img and comment plugin on the page
+lazyload:
+  enable: true
+
+  # 加载时的占位图片
+  # The placeholder image when loading
+  loading_img: /img/loading.gif
+
+  # 开启后懒加载仅在文章页生效，如果自定义页面需要使用，可以在 Front-matter 里指定 `lazyload: true`
+  # If true, only enable lazyload on the post page. For custom pages, you can set 'lazyload: true' in front-matter
+  onlypost: false
+
+  # 触发加载的偏移倍数，基数是视窗高度，可根据部署环境的请求速度调节
+  # The factor of viewport height that triggers loading
+  offset_factor: 2
+
+# 图标库，包含了大量社交类图标，主题依赖的不包含在内，因此可自行修改，详见 https://hexo.fluid-dev.com/docs/icon/
+# Icon library, which includes many social icons, does not include those theme dependent, so your can modify link by yourself. See: https://hexo.fluid-dev.com/docs/en/icon/
+iconfont: //at.alicdn.com/t/font_3168026_86zslxhi3dt.css
+
+
+
+#---------------------------
+# 页头
+# Header
+#---------------------------
+navbar:
+  blog_title:  # 导航栏左侧的标题，为空则按 hexo config.title 显示
+  menu: # 可自行增减，若想减去某个入口，可以将值留空
+    主页: /
+    归档: /archives/
+    分类: /categories/
+    #学习笔记: /tags/笔记/
+    # 诗文随笔: /tags/随笔/
+    # 随笔: /tags/随笔/
+    标签: /tags/
+    友链: /links/
+    关于: /about/
+
+search: # 搜索栏
+  enable: true
+  path: /local-search.xml # 文件引用地址，可以将生成后的 local-search.xml 上传到其它位置引用，如：https://www.example.com/local-search.xml
+  generatePath: /local-search.xml # 文件生成位置，必须为相对位置
+  field: post
+  content: true
+
+scroll_down_arrow: # 向下滚动的箭头
+  enable: true
+  banner_height_limit: 90  # 头图高度不小于指定比例，才显示箭头
+  scroll_after_turning_page: true  # 翻页后自动滚动
+
+full_banner: true # 头图和页面头部是否占满全屏，开启需同时设置对应页面 banner_img_height 为100
+full_bg_img: true # 头图是否铺满全屏
+banner_scroll: false  # 头图是否跟随页面滚动
+random_bg:
+  enable: false # 是否开启随机背景
+  time: 20 # 随机背景轮换时间，单位为秒
+  fade: 2  # 随机背景渐变时间，单位为秒
+  type: online # 随机背景类型，可选 online,local ，online 为在线随机背景，local为自定义随机背景
+  ctype: auto # 可选 random,auto,acg,nature ，auto 为不指定 ctype，random 为在两种 ctype 中随机，留空则不限制图片类型为 bg，具体参见：https://www.xjh.me/3069.html?replytocom=4888
+  num: 3 # 在线随机背景个数，请不要设置太大
+  url: # 自定义随机背景地址（可以为相对链接），上方 type 为 local 时填写，每行一个链接，前面的数值编号可以随便填但不要重复
+    1: http://img.xjh.me/desktop/bg/acg/64082849_p0.jpg
+    2: http://img.xjh.me/desktop/bg/acg/63946708_p0.jpg
+    3: http://img.xjh.me/desktop/bg/acg/59756207_p0.jpg
+    4: http://img.xjh.me/desktop/bg/acg/63374320_p0.jpg
+    5: http://img.xjh.me/desktop/bg/nature/59190594_p0.jpg
+    6: http://img.xjh.me/desktop/bg/acg/63093148_p0.jpg
+    7: http://img.xjh.me/desktop/bg/acg/62494753_p0.jpg
+    8: http://img.xjh.me/desktop/bg/acg/61749296_p0.jpg
+
+
+#---------------------------
+# 页脚
+# Footer
+#---------------------------
+footer:
+  show_copyright: true # 显示博客版权信息
+  date: # 显示博客运行时间
+    enable: true
+    create_date: 12/12/2021 07:21:00 # 博客创立时间，格式如 12/12/2021 07:21:00
+    text:  本站已稳定运行 # 萌萌哒%d天啦 要显示的文字，%d 是指日期数，不要漏掉
+  site_pv:
+    enable: false # 是否显示本站总访问量
+    text: 被瞅了%d次 # %d 是指访问数量
+    offset:  # 总访问量数值修正，不清楚请留空
+  site_uv:
+    enable: false # 是否显示本站访客数
+    text: 被%d人看爆
+    offset:  # 访客数数值修正，不清楚请留空
+  beian: # The footer of China's website policy, other areas keep disable
+    enable: false
+    icp_text: 京ICP证123456号 # ICP证号
+    police_text: 京公网安备12345678号 # 公安备案号，不填则只显示ICP
+    police_code: 12345678 # 公安备案的编号，用于URL跳转查询
+    police_icon: /img/police_beian.png # 公安备案的图片. 为空时不显示备案图片
+  hitokoto: true # 显示一言，关于一言：https://hitokoto.cn/
+
+scroll_top_arrow: # 向顶部滚动的箭头
+  enable: true
+
+#---------------------------
+# 首页
+# Index Page
+#---------------------------
+index:
+  banner_img: /static/images/wallhaven-8opx8k.jpg # https://ae01.alicdn.com/kf/U8720aea1269b407990ade7c258ae0d8b8.jpg
+  #/img/bg.jpg # bg:https://ae01
+  .alicdn.com/kf/U8720aea1269b407990ade7c258ae0d8b8.jpg | sakura1:https://ae01.alicdn.com/kf/U05a569955d8e4cfbae97f48a38290440e.jpg | sakura2: https://ae01.alicdn.com/kf/Uf0c80a27e7b94925b41f42d958f74ccbn.jpg
+  banner_img_height: 100  # available: 0 - 100
+  slogan: # 首页副标题的独立设置
+    enable: true  # 为 false 则不显示任何内容
+    text:  # 为空则按 hexo config.subtitle 显示
+  auto_excerpt:
+    enable: true
+  post_url_target: _self  # available: _blank | _self
+  post_meta: # 是否显示文章信息（时间、字数、分类、标签）
+    date: true
+    wordcount: true
+    category: true
+    tag: true
+  post_img:
+    enable: false # 是否显示首页文章列表图片
+    default: /img/default.png # 首页文章列表默认图片
+    random: true # 是否开启文章列表随机图片，具体参见：https://www.xjh.me/3069.html?replytocom=4888
+    ctype: # 可选 random,auto,acg,nature ，auto 为不指定 ctype，random 为在两种 ctype 中随机，留空则不限制图片类型为 bg
+
+#---------------------------
+# 文章页
+# Post Page
+#---------------------------
+post:
+  banner_img:
+  banner_img_height: 70  # available: 0 - 100
+  date_format: "YYYY-MM-DD" #"dddd, MMMM Do YYYY, h:mm a"
+  pageview: false # 是否显示访问统计，参见 https://busuanzi.ibruce.info/
+  toc:
+    enable: true
+  copyright:
+    enable: true
+    content: '本站文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh" rel="nofollow noopener">CC BY-NC-SA 3.0 CN</a> 协议进行许可'
+  custom:
+    enable: false
+    content: '<img src="https://octodex.github.com/images/jetpacktocat.png" class="rounded mx-auto d-block mt-5" style="width:150px; height:150px;">' # 自定义区域，支持 HTML，可自行插入赞赏码、公众号二维码等内容
+  comments:
+    enable: true
+    type: waline  # available: disqus | valine | waline | gitalk | utterances | changyan | livere
+    autojump: true # 自动跳转到对应评论
+  math: # 数学公式，开启之前需要更换 Markdown 渲染器，否则复杂公式会有兼容问题，具体请见 https://fluid-dev.github.io/hexo-fluid-docs/guide/#数学公式
+    enable: true
+    specific: false  # 开启后，只有在文章 Front-matter 里指定 `math: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度
+    engine: mathjax  # 公式引擎  available: mathjax | katex
+
+
+#---------------------------
+# 评论
+# Comments
+#---------------------------
+
+# utterances
+# You can install utterances with https://utteranc.es/ and generate your configuration
+utterances:
+  repo: # username/comments
+  issue_term: pathname
+  label: utterances
+  theme: github-light
+  crossorigin: anonymous
+
+# Disqus
+disqus:
+  shortname:  # your shortname
+
+# Gitalk
+# You can get yout ClientID and ClientSecret from https://github.com/settings/applications/new
+# More info available at https://github.com/gitalk/gitalk#options
+gitalk:
+  clientID:                     # GitHub Application Client ID
+  clientSecret:                 # GitHub Application Client Secret
+  repo:                         # The repo to store comments
+  owner:                        # GitHub repository owner. Can be personal user or organization.
+  admin:                        # GitHub repo owner and collaborators, only these guys can initialize github issues, should be like "['admin']" or "['admin1','admin2']"
+  id: location.pathname         # The unique id of the page. Length must less than 50.
+  language: zh-CN               # Localization language key, en, zh-CN and zh-TW are currently available.
+  labels: "['Gitalk']"          # GitHub issue labels.
+  perPage: 15                   # Pagination size, with maximum 100.
+  pagerDirection: last          # Comment sorting direction, available values are last and first.
+  distractionFreeMode: false    # Facebook-like distraction free mode.
+  createIssueManually: true     # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true.
+
+# Valine
+# You can get your appid and appkey from https://leancloud.cn
+# More info available at https://valine.js.org
+valine:
+  appid:  # your leancloud application appid
+  appkey: # your leancloud application appkey
+  notify: true # mail notifier, See: https://github.com/xCss/Valine/wiki
+  verify: true # Verification code
+  placeholder: 说点什么吧quq # comment box placeholder
+  avatar: mp # gravatar style https://valine.js.org/avatar.html
+  pageSize: 10 # pagination size
+
+# Waline
+# You can get your appid and appkey from https://leancloud.cn
+# More info available at https://waline.js.org
+waline:
+  serverurl: https://blog-waline-m0eiqctad-alwayscn.vercel.app/ # ttps://waline-api-nu.vercel.app # your waline server URL
+  notify: true # mail notifier, See: https://github.com/xCss/Valine/wiki
+  verify: true # Verification code
+  placeholder: 说点什么吧quq # comment box placeholder
+  avatar: mp # gravatar style https://waline.js.org/avatar.html
+  avatarcdn: https://gravatar.loli.net/avatar/ # gravatar proxy
+  pageSize: 10 # pagination size
+
+# Changyan
+# You can get your appid from http://changyan.kuaizhan.com/setting/common/isv-mgr
+# Install: http://changyan.kuaizhan.com/static/help/f-fitself.html
+changyan:
+  appid: ''            # your changyan application appid        # 畅言ID
+  conf: ''             # conf                                   # 畅言设置
+  notify: false        # beian warning message                  # 备案提示
+  libopen: true        # open laboratory                        # 畅言实验室功能开关
+  cyEmoji: true        # comments emoji                         # 评论表情
+  cyWallsplugin: true  # Hot text matching                      # 热文配图
+  cyReping: true       # hot comments                           # 热门评论
+  cyReward: true       # reward                                 # 打赏
+  cyQing: true         # Light comment                          # 轻评论
+  cyHotusers: true     # User evaluation                        # 热评用户
+  cyHotnews: true      # Hot news                               # 热门新闻
+  cyHotnewswall: true  # News wall                              # 新闻墙
+  cyPk: ''             # Topic debate                           # 辩论
+  cyPoll: true         # vote                                   # 投票
+  cyBarrage: true      # Picture barrage                        # 图片弹幕
+  cyTvbarrage: true    # Video barrage                          # 视频弹幕
+
+# Livere 来必力
+# You can get your uid from https://www.livere.com/my_Livere
+livere:
+  uid: ''            # your livere application uid        # 来必力ID
+
+
+#---------------------------
+# 归档页
+# Archive Page
+#---------------------------
+archive:
+  banner_img:
+  banner_img_height: 80  # available: 0 - 100
+
+
+#---------------------------
+# 分类归档页
+# Categories Page
+#---------------------------
+category:
+  banner_img:
+  banner_img_height: 80  # available: 0 - 100
+
+
+#---------------------------
+# 标签归档页
+# Tags Page
+#---------------------------
+tag:
+  banner_img:
+  banner_img_height: 80  # available: 0 - 100
+  tagcloud: # 标签云
+    min_font: 15
+    max_font: 30
+    unit: px  # 字号单位
+    start_color: "#BBBBEE"
+    end_color: "#337ab7"
+
+
+#---------------------------
+# 关于页
+# About Page
+#---------------------------
+about: # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
+  enable: true # 是否开启关于页
+  md_path: ../../source/about/about.md  # 关于页文档的相对路径，可以按相对文档设置主题之外的路径，从而避免更新冲突
+  banner_img:
+  banner_img_height: 80  # available: 0 - 100
+  comments: true # 是否开启页面评论功能，评论相关设置见文章页设置
+  name: 张小剩
+  introduce: One two one ...  # 支持 HTML
+  icons: # 更多图标可从 https://fontawesome.com/v4.7.0/icons/ 查找，并以 "图标名: url" 的格式添加在下方
+    "fab fa-github": https://github.com/alwayscn
+    "fab fa-twitter": https://www.yuque.com/extime/blog
+    "fab fa-blog": https://www.cnblogs.com/wehome
+    "fas fa-envelope": mailto:zhangxy.cn@gmail.com
+
+
+#---------------------------
+# 404页
+# 404 Page
+#---------------------------
+page404:
+  banner_img:
+  banner_img_height: 80  # available: 0 - 100
+  subtitle: 'Page not found'
+
+
+#---------------------------
+# 友链页
+# Links Page
+#---------------------------
+links:
+  enable: true # 是否开启友链页
+  banner_img:
+  banner_img_height: 80  # available: 0 - 100
+  comments: true # 是否开启页面评论功能，评论相关设置见文章页设置
+  items:
+    站点聚合平台: [ "https://sites.link/", "因为热爱， 所以相聚" ]
+    LonelyGod: [ "https://hin.cool/" ]
+    Blue的博客: [ "http://coderblue.cn/", "一花一世界，一叶一浮生" ]
+    杨文卓的博客: [ "https://www.yangwenzhuo.top/", "这家伙很懒，能饮一杯无？" ]
+    lavender: [ "https://www.lavenderdh.cn/", "一个努力学习的菜鸟程序员" ]
+    诗酒乘年华: [ "https://shawnzeng.com/", "一个爱鼓捣前端的产品汪" ]
+    白米饭Ooo: [ "https://www.baimifan.com.cn/" ]
+    小丁的个人博客: [ "https://tding.top/", "世间所有的相遇，都是久别重逢" ]
+    MoeDev的悄悄哈: [ "https://www.moedev.net/", "冲国DD" ]
+    折影轻梦: [ "https://nexmoe.com/", "Entorevolution" ]
+    孤影墨香: [ "https://www.gymxbl.com/", "尽管我们手中空无一物，却也能给某人带去笑容" ]
+    辣椒の酱: [ "https://removeif.github.io/", "后端开发，技术分享" ]
+    爱即是诗: [ "https://www.aigisss.com/", "AI&GIS" ]
+    泽泽社: [ "https://zezeshe.com/", "泽泽社长的个人博客" ]
+    小枫叶: [ "https://www.smallmaple.com/", "欢迎来到小世界" ]
+    洛尘曦: [ "https://www.sgyzyun.club/", "一个手无缚机（手机）之力的书生小站~" ]
+    ギリ猫: [ "https://ineko.cc/", "DO WHAT YOU WANT." ]
+    知雨: [ "https://coor.top/", "桃之夭夭，灼灼其华" ]
+    dmcimi: [ "https://blog.dmcimi.top/", "一个奇妙记录着生活的人" ]
+    m0re: [ "https://zxcv0221.github.io/", "一个学web的懒狗！" ]
+    Cyris: [ "https://cyris.moe/", "花如解笑还多事，石不能言最可人" ]
+
+
+
+#---------------------------
+# 侧边栏
+# Sidebar
+#---------------------------
+sidebar:
+  enable: true
+  name:  # 名字，留空则使用网站title
+  introduce: "One two one ... <script type='text/javascript'>console.log('博主认证: https://bbs.liyuans.com')</script>"
+  icons: # 更多图标可从 https://fontawesome.com/v4.7.0/icons/ 查找，并以 "图标名: url" 的格式添加在下方
+    "fab fa-github": https://github.com/alwayscn
+    "fab fa-twitter": https://www.yuque.com/extime/blog
+    "fab fa-blog": https://www.cnblogs.com/wehome
+    "fas fa-envelope": mailto:zhangxy.cn@gmail.com
+
+
+#---------------------------
+# 侧栏友链
+# Friends
+#---------------------------    
+friends:
+  LeanCloud: https://console.leancloud.app/
+  Vercel: https://vercel.com/
+  一言: https://hitokoto.cn/
+  打字游戏: https://zty.pe/
+  在线涂鸦: https://flipanim.com/
+  Gogoame (午後雨): http://gogoame.sumbioun.com/
+  减压滑碟: https://hin.cool/c/dd.html
+#  转转魔方: https://hin.cool/c/mf.html
+  元素周期: https://www.jq22.com/yanshi4710
+#  友情链接: /links/

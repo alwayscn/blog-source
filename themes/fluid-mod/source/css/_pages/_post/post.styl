@@ -1,0 +1,161 @@
+ .post-content
+  box-sizing border-box
+  padding-left 10%
+  padding-right 10%
+  max-width 64rem
+
+  img
+    max-width 90%
+    margin 1.5rem auto
+    display block
+    box-shadow $img-shadow
+
+@media (max-width: 768px)
+  .post-content
+    padding-left 2rem
+    padding-right 2rem
+
+@media (max-width: 425px)
+  .post-content
+    padding-left 1rem
+    padding-right 1rem
+
+.post-content h1::before, h2::before, h3::before, h4::before, h5::before, h6::before
+  display block
+  content ""
+  margin-top -50px
+  height 50px
+  width 1px
+  visibility hidden
+
+// nav
+
+#post-note
+  margin 1rem 0
+  padding .5rem 0
+  border-left 3px solid
+  background-color #f9f9f9
+  border-color #eeeeee
+
+#post-note div
+  padding .2rem .5rem
+
+#post-nav
+  padding 0
+  width 100%
+
+#post-nav-prev
+  text-align left
+
+#post-nav-next
+  text-align right
+
+
+
+
+// toc
+
+#toc
+  padding 3rem 1rem 1rem 1rem
+  //height calc(100% - 9rem)
+  background-color rgba(228,245,239, 0.5) // #e4f5ef
+
+#toc p
+  color $toc-title-p-color
+
+#tocbot
+  max-height 100%
+  overflow-y scroll
+  overflow -moz-scrollbars-none
+  scrollbar-width none
+  -ms-overflow-style none
+  &::-webkit-scrollbar
+    display none
+  ol
+    list-style none
+    padding-inline-start 1rem
+
+.tocbot-list
+  ol
+    list-style none
+    padding-left 1rem
+  a
+    font-size: 15px
+
+.tocbot-link
+  color $tocbot-link-color
+  text-shadow $tocbot-link-shadow
+
+.tocbot-active-link
+  font-weight 600
+  color $tocbot-link-active-color
+  text-shadow $tocbot-active-link-shadow
+
+.tocbot-is-collapsible
+  max-height 1000px
+  overflow hidden
+  transition all 300ms ease-in-out
+
+.tocbot-is-collapsed
+  max-height 0
+
+.catalog-close
+  line-height: 22px;
+  padding: 6px 0;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  display: none;
+  //display: inline-block;
+
+#post-catalog-bar
+  position: fixed;
+  background: #fff;
+  padding: 6px;
+  top: 20%;
+  box-shadow: 0 0 2px 0 rgb(98 124 153 / 20%);
+  font-size: 12px;
+  visibility: hidden;
+  cursor: pointer;
+  transition: color .3s;
+  writing-mode: vertical-rl;
+
+.post-catalog-bar-left-minborder
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+.catalog-close:before
+    content: "\f410";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    display: none;
+    //display: inline-block;
+    color: #000;
+    font-size: 10px;
+    margin-right: 10px;
+    position: relative;
+    left: 6px;
+.fa-book-open:before {
+    content: "\f518";
+}
+
+@media (max-width: 1024px)
+  .toc-container
+    padding-left 0
+    padding-right 0
+
+.custom, .comments
+  margin-left: 2rem
+  margin-right: 2rem
+
+@media (max-width: 425px)
+  .custom, .comments
+    margin-left: 1rem
+    margin-right: 1rem
+
+@media (min-width: 64rem)
+  .custom, .comments
+    max-width: 64rem
+
+.katex-block
+  overflow-x auto
