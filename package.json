@@ -45,7 +45,7 @@
     "concurrency": 5,
     "baseUrl": "https://www.yuque.com/api/v2",
     "login": "extime",
-    "repo": "blog",
+    "repo": "博客同步",
     "token": "hqTJO4VdljjNXQyzgctIsySyHlbcqe6eWH3r7oGu",
     "onlyPublished": true,
     "onlyPublic": true
